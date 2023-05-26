@@ -56,5 +56,7 @@ android {
     }
 }
 
-//TODO:
-//compose.kotlinCompilerPlugin.set("1.4.7-rc01")
+compose {
+    kotlinCompilerPlugin.set("org.jetbrains.compose.compiler:compiler:1.4.7-rc01")
+    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.8.21")
+}
