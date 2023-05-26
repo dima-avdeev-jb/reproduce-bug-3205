@@ -9,6 +9,7 @@ kotlin {
 
     jvm("desktop")
 
+
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -17,7 +18,6 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
-                implementation(project(":module2"))
             }
         }
         val androidMain by getting {

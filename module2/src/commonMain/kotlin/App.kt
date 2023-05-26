@@ -15,8 +15,3 @@ import androidx.compose.ui.Modifier
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
-@Composable
-fun App() {
-    // https://github.com/JetBrains/compose-multiplatform/issues/3205
-    Text("Reproduce bug 3205")
-}
