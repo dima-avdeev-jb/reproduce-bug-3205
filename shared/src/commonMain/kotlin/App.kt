@@ -19,4 +19,22 @@ import org.jetbrains.compose.resources.painterResource
 fun App() {
     // https://github.com/JetBrains/compose-multiplatform/issues/3205
     Text("Reproduce bug 3205")
+    MaterialUI2.SomeUI {
+        Text("")
+    }
+}
+
+object MaterialUI2 : FullStyle2, MAUIMetadata2
+
+interface FullStyle2: InterfaceInAnotherModule
+
+interface MAUIMetadata2 : InterfaceInAnotherModule {
+
+    @Composable
+    override fun SomeUI(
+        content: @Composable () -> Unit,
+    ) {
+        content()
+    }
+
 }
